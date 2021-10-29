@@ -2,7 +2,7 @@ const validateRecipeWithQuantity = (fridge, ingredients) => {
   const trueObj = {};
   for (const [key, value] of Object.entries(fridge)) {
     for (const [key1, value1] of Object.entries(ingredients)) {
-      if (key === key1 && value === value1) {
+      if (key >= key1 && value >= value1) {
         trueObj[key1] = value1;
       }
     }
